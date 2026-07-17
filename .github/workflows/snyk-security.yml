@@ -51,7 +51,7 @@ jobs:
         # Runs Snyk SKILL Scanning analysis and uploads result into GitHub.
         # Use || true to not fail the pipeline
       - name: Snyk Skill Scan
-        run: uvx snyk-agent-scan@latest --ci --dangerously-run-mcp-servers --json .claude/skills
+        run: uvx snyk-agent-scan@latest --json .claude/skills
 
         # Push the Snyk Code results into GitHub Code Scanning tab
       - name: Upload result to GitHub Code Scanning
